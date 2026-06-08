@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deccan Supplies</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="wrap">
+            <div class="left">
+                <span><i class="fas fa-phone"></i><a href="tel:+919845098882">+91-9845098882</a> / <a
+                        href="tel:+9199731452412">+91-99731452412</a></span>
+                <span><i class="fas fa-envelope"></i><a
+                        href="mailto:info@deccansupplies.com">info@deccansupplies.com</a></span>
+                <span><i class="fas fa-location-dot"></i>BSK 3rd Stage, Bangalore &ndash; 560061</span>
+            </div>
+            <div class="right">Mon &ndash; Sat &nbsp;|&nbsp; 9:00 AM &ndash; 6:00 PM</div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <div class="name">Deccan <span>Supplies</span></div>
+                <div class="tagline">Industrial Automation &amp; Panel Accessories Supplier</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- <a href="#contact" class="btn-quote"><i class="fas fa-envelope"></i>Get a Quote</a> -->
+                <button class="hamburger" onclick="document.getElementById('mob').classList.add('open')"><i
+                        class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mob-menu" id="mob">
+        <button class="mob-close" onclick="document.getElementById('mob').classList.remove('open')"><i
+                class="fas fa-times"></i></button>
+        <a href="#home" onclick="document.getElementById('mob').classList.remove('open')">Home</a>
+        <a href="#about" onclick="document.getElementById('mob').classList.remove('open')">About Us</a>
+        <a href="#products" onclick="document.getElementById('mob').classList.remove('open')">Our Products</a>
+        <a href="#why-us" onclick="document.getElementById('mob').classList.remove('open')">Why Us</a>
+        <a href="#contact" onclick="document.getElementById('mob').classList.remove('open')">Contact</a>
+        <div class="mob-contact">
+            <p>Call us</p><a href="tel:+919845098882">+91-9845098882</a>
+        </div>
+    </div>
+
+    <!-- HERO CAROUSEL -->
+    <section id="home">
+        <div class="carousel" id="mainCarousel">
+            <div class="carousel-inner" id="carouselInner">
+
+                <!-- SLIDE 1 -->
+                <div class="carousel-item slide-bg-1">
+                    <div class="carousel-caption">
+                        <div class="c-label">Welcome to Deccan Supplies</div>
+                        <h1 class="c-title">Your Bangalore Partner for Genuine Electrical Supplies<br><span>Proven
+                                Supply & Support</span></h1>
+                        <p class="c-desc">Serving industrial clients across India and offshore for over 12 years with
+                            genuine products and on-time delivery.</p>
+                        <div class="c-btns">
+                            <a href="#products" class="c-btn-solid"><i class="fas fa-th-large"></i>View Products</a>
+                            <a href="#contact" class="c-btn-ghost"><i class="fas fa-phone"></i>Call Us Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-item slide-bg-2">
+                    <div class="carousel-caption">
+                        <div class="c-label">Engineering-grade electrical & mechanical parts</div>
+                        <h1 class="c-title">Product Development and Integration</h1>
+                        <p class="c-desc">Supporting product development and integration with genuine components,
+                            reliable sourcing, and on-time delivery.</p>
+                        <div class="c-btns">
+                            <a href="#products" class="c-btn-solid"><i class="fas fa-boxes-stacked"></i>Browse
+                                Products</a>
+                            <a href="#contact" class="c-btn-ghost"><i class="fas fa-envelope"></i>Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SLIDE 3 -->
+                <div class="carousel-item slide-bg-3">
+                    <div class="carousel-caption">
+                        <div class="c-label">Quality Electrical & Mechanical Parts</div>
+                        <h1 class="c-title">MCBs, Fuses,<br><span>Terminal Blocks</span><br>&amp; Much More</h1>
+                        <p class="c-desc">All sourced through authorized channels. No grey market, guaranteed.</p>
+                        <div class="c-btns">
+                            <a href="#products" class="c-btn-solid"><i class="fas fa-boxes-stacked"></i>Browse
+                                Products</a>
+                            <a href="#contact" class="c-btn-ghost"><i class="fas fa-envelope"></i>Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control carousel-prev" onclick="carouselMove(-1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <button class="carousel-control carousel-next" onclick="carouselMove(1)"><i
+                    class="fas fa-chevron-right"></i></button>
+
+            <ol class="carousel-indicators" id="carouselDots">
+                <li><button class="active" onclick="carouselGo(0)"></button></li>
+                <li><button onclick="carouselGo(1)"></button></li>
+                <li><button onclick="carouselGo(2)"></button></li>
+            </ol>
+
+            <div class="carousel-num" id="carouselNum">1 / 3</div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="section-wrap">
+            <div class="sec-head fade">
+                <h2>About <span>Deccan Supplies</span></h2>
+                <div class="sec-underline"></div>
+                <p>We are a Bangalore-based electrical hardware supplier dedicated to quality products and long-term
+                    client relationships.</p>
+            </div>
+            <div class="about-flex">
+                <div class="about-img-side fade">
+                    <img src="assets/images/resources/951739169868_.pic-!j.m.webp" alt="About Deccan Supplies"
+                        onerror="this.style.background='#eee';this.style.height='300px'">
+                    <div class="exp-badge">
+                        <div class="big">12+</div>
+                        <div class="small">Years of Experience</div>
+                    </div>
+                </div>
+                <div class="about-text-side fade">
+                    <h3>Your Reliable Partner for Electrical Hardware</h3>
+                    <p>Greetings from Deccan Supplies! We are a dedicated team handling Turnkey projects and services
+                        based out of Bangalore, Karnataka.</p>
+                    <p>We thrive to deliver excellence with honesty, integrity, and commitment. Whether you need a small
+                        batch of insulators or complete project support, we are here to help.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i>Complete turnkey project execution from concept to
+                            commissioning</li>
+                        <li><i class="fas fa-check-circle"></i>Products sourced from authorized and verified vendor
+                            network</li>
+                        <li><i class="fas fa-check-circle"></i>Serving both domestic and offshore industrial clients
+                        </li>
+                        <li><i class="fas fa-check-circle"></i>Consistent quality with on-time delivery, always</li>
+                        <li><i class="fas fa-check-circle"></i>Dedicated support &mdash; we actually pick up the phone
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-features">
+                <div class="af-box"><i class="fas fa-handshake"></i>
+                    <div>
+                        <h4>Product Development</h4>
+                        <p>We work with engineering teams to source the right components, validate specifications, and
+                            support prototyping so projects move from concept to reality without delays.</p>
+                    </div>
+                </div>
+                <div class="af-box"><i class="fas fa-handshake"></i>
+                    <div>
+                        <h4>Product Integration</h4>
+                        <p>Our support continues through installation, helping integrate electrical and panel hardware
+                            with tested compatibility, reliable sourcing, and practical onsite guidance.</p>
+                    </div>
+                </div>
+                <div class="af-box"><i class="fas fa-handshake"></i>
+                    <div>
+                        <h4>Client First</h4>
+                        <p>We put every client requirement first, offering transparent service, honest advice, and
+                            prompt responses from a real team member.</p>
+                    </div>
+                </div>
+                <div class="af-box"><i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Genuine Products</h4>
+                        <p>No grey market, ever.</p>
+                    </div>
+                </div>
+                <div class="af-box"><i class="fas fa-truck"></i>
+                    <div>
+                        <h4>On-Time Delivery</h4>
+                        <p>We respect your deadlines.</p>
+                    </div>
+                </div>
+                <div class="af-box"><i class="fas fa-globe"></i>
+                    <div>
+                        <h4>Offshore Ready</h4>
+                        <p>International project experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- COUNTER STRIP -->
+    <div class="counter-strip">
+        <div class="counter-grid">
+            <div class="counter-box fade"><i class="fas fa-calendar-check"></i>
+                <div class="counter-num">12<span>+</span></div>
+                <div class="counter-lbl">Years in Business</div>
+            </div>
+            <div class="counter-box fade"><i class="fas fa-project-diagram"></i>
+                <div class="counter-num">500<span>+</span></div>
+                <div class="counter-lbl">Projects Done</div>
+            </div>
+            <div class="counter-box fade"><i class="fas fa-boxes-stacked"></i>
+                <div class="counter-num">50<span>+</span></div>
+                <div class="counter-lbl">Product Categories</div>
+            </div>
+            <div class="counter-box fade"><i class="fas fa-users"></i>
+                <div class="counter-num">100<span>%</span></div>
+                <div class="counter-lbl">Commitment</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section class="section gray-bg" id="products">
+        <div class="section-wrap">
+            <div class="sec-head fade">
+                <h2>Our <span>Products</span></h2>
+                <div class="sec-underline"></div>
+                <p>We stock a wide range of electrical insulators, switchgear, and accessories. All sourced from
+                    authorized channels.</p>
+            </div>
+
+            <div class="prod-section-title">Insulator Products</div>
+            <div class="prod-grid" style="margin-bottom:40px">
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Pot Type</span>
+                        <img src="assets/images/resources/pot.jpeg" alt="Red Insulator Bush">
+                    </div>
+                    <div class="prod-info">
+                        <h3>Conical and pot type</h3><span class="prod-tag">Pot type</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">DMC/SMC</span><img
+                            src="assets/images/resources/red-conical-insulator-500x500 (1).jpg"
+                            alt="Red Insulator Bush"></div>
+                    <div class="prod-info">
+                        <h3>Red Insulator Bush &ndash; Conical</h3><span class="prod-tag">DMC / SMC</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Busbar</span><img
+                            src="assets/images/resources/l-type-busbar-insulator (1).jpg" alt="L-Support"></div>
+                    <div class="prod-info">
+                        <h3>L-Support Type Insulator</h3><span class="prod-tag">Busbar Support</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Panel</span><img
+                            src="assets/images/resources/earthing-strip-dmc-i..._imresizer (1).jpg"
+                            alt="Earthing Strip"></div>
+                    <div class="prod-info">
+                        <h3>Earthing Strip Insulator</h3><span class="prod-tag">Panel Grade</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">36V</span><img
+                            src="assets/images/resources/36-v-tpn-type-dmc-in..._imresizer.jpg" alt="TPN"></div>
+                    <div class="prod-info">
+                        <h3>TPN Type Insulator</h3><span class="prod-tag">36V Rated</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Single Pole</span><img
+                            src="assets/images/resources/sp-type-insulators-7..._imresizer.jpg" alt="SP Type"></div>
+                    <div class="prod-info">
+                        <h3>SP Type Insulator</h3><span class="prod-tag">Single Pole</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Control</span><img
+                            src="assets/images/resources/Control-Panel-Finger..._imresizer.jpg" alt="Finger Type"></div>
+                    <div class="prod-info">
+                        <h3>Finger Type Insulator</h3><span class="prod-tag">Control Panel</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">SMC</span><img
+                            src="assets/images/resources/smc-drum-electrical-..._imresizer.jpg" alt="SMC Drum"></div>
+                    <div class="prod-info">
+                        <h3>SMC Type Insulator</h3><span class="prod-tag">Drum / Barrel</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="prod-section-title">Electrical Parts</div>
+            <div class="prod-grid" style="margin-bottom:40px">
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">DIN Rail</span>
+
+                        <img src="assets/images/resources/channel.jpeg" alt="MCB">
+                    </div>
+                    <div class="prod-info">
+                        <h3>PVC channel/DIN rail</h3><span class="prod-tag">Panel Mounting</span>
+                    </div>
+                </div>
+
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">PVC</span><img
+                            src="assets/images/resources/studs.jpeg" alt="MCB"></div>
+                    <div class="prod-info">
+                        <h3>PVC Panel studs (60 mm to 120 mm length)</h3>
+                        <span class="prod-tag">60–120 mm</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Copper</span><img
+                            src="assets/images/resources/cablelugs.jpeg" alt="MCB"></div>
+                    <div class="prod-info">
+                        <h3>Cable Lugs</h3><span class="prod-tag">Cable Termination</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Cable</span><img
+                            src="assets/images/resources/cabel.avif" alt="MCB"></div>
+                    <div class="prod-info">
+                        <h3>Essential Cable Accessories </h3><span class="prod-tag">Accessories</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Terminal</span><img
+                            src="assets/images/resources/phoenix-contact-disc..._imresizer.png" alt="Terminal"></div>
+                    <div class="prod-info">
+                        <h3>Phoenix Contact Terminal Blocks</h3><span class="prod-tag">Panel Wiring</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Relay</span><img
+                            src="assets/images/resources/PM103549_RelayAux_Su..._imresizer.jpg" alt="Relay"></div>
+                    <div class="prod-info">
+                        <h3>Schneider Auxiliary Relays</h3><span class="prod-tag">Control Circuit</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Protection</span><img
+                            src="assets/images/resources/mcb.jpeg" alt="MCB"></div>
+                    <div class="prod-info">
+                        <h3>Miniature Circuit Breaker (MCB)</h3><span class="prod-tag">Circuit Breaker</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="prod-section-title">Mechanical Parts</div>
+            <div class="prod-grid" style="margin-bottom:40px">
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Hardware</span><img
+                            src="assets/images/resources/metalspacers.jpeg" alt="MCB"></div>
+                    <div class="prod-info">
+                        <h3>Metal spacers</h3><span class="prod-tag">Metal Spacer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prod-section-title">Other Products</div>
+            <div class="prod-grid">
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Printer</span><img
+                            src="assets/images/resources/canon-cable-id-print..._imresizer.jpg" alt="Canon"></div>
+                    <div class="prod-info">
+                        <h3>Canon Cable ID Printers</h3><span class="prod-tag">Cable Marketing</span>
+                    </div>
+                </div>
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Ink</span><img
+                            src="assets/images/resources/canon-ink-revised_imresizer.jpg" alt="Ink"></div>
+                    <div class="prod-info">
+                        <h3>Canon Ink Cartridges</h3><span class="prod-tag">Printer Consumable</span>
+                    </div>
+                </div>
+
+                <div class="prod-card fade">
+                    <div class="prod-img"><span class="prod-badge">Nameplate</span><img
+                            src="assets/images/resources/Traffolight.jpeg" alt="Relay"></div>
+                    <div class="prod-info">
+                        <h3>Traffolight name plate</h3><span class="prod-tag">Panel Identification</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section" id="why-us">
+        <div class="section-wrap">
+            <div class="sec-head fade">
+                <h2>Why Choose <span>Us?</span></h2>
+                <div class="sec-underline"></div>
+                <p>We are a small team but we work with full dedication. Here is what makes Deccan Supplies different
+                    from others.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-box fade">
+                    <div class="why-ico"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Genuine Products Only</h4>
+                    <p>All products sourced through authorized distributors. No grey market, no compromise on quality.
+                    </p>
+                </div>
+                <div class="why-box fade">
+                    <div class="why-ico"><i class="fas fa-truck"></i></div>
+                    <h4>Fast &amp; Reliable Delivery</h4>
+                    <p>We understand project urgency. Most orders dispatched same day or next working day from
+                        Bangalore.</p>
+                </div>
+                <div class="why-box fade">
+                    <div class="why-ico"><i class="fas fa-rupee-sign"></i></div>
+                    <h4>Fair &amp; Transparent Pricing</h4>
+                    <p>What we quote is what you pay. No hidden charges, no surprises at delivery.</p>
+                </div>
+                <div class="why-box fade">
+                    <div class="why-ico"><i class="fas fa-headset"></i></div>
+                    <h4>Real Person Support</h4>
+                    <p>Call or WhatsApp us anytime during business hours. A real team member will respond &mdash; not a
+                        bot.</p>
+                </div>
+                <div class="why-box fade">
+                    <div class="why-ico"><i class="fas fa-globe"></i></div>
+                    <h4>Offshore Experience</h4>
+                    <p>We have handled international project requirements including documentation and compliance
+                        support.</p>
+                </div>
+                <div class="why-box fade">
+                    <div class="why-ico"><i class="fas fa-redo"></i></div>
+                    <h4>Strong Repeat Business</h4>
+                    <p>Most of our clients come back. Most of our new clients come through referrals. That is our track
+                        record.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section gray-bg" id="contact">
+        <div class="section-wrap">
+            <div class="sec-head fade">
+                <h2>Get In <span>Touch</span></h2>
+                <div class="sec-underline"></div>
+                <p>Have a requirement or need a quotation? Please fill the form below or call us directly. We will get
+                    back to you as soon as possible.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade">
+                    <h3>Contact Information</h3>
+                    <p>We are available Monday to Saturday from 9 AM to 6 PM. Feel free to call, email, or WhatsApp us
+                        with your requirements.</p>
+                    <ul class="info-list">
+                        <li>
+                            <div class="info-ico"><i class="fas fa-location-dot"></i></div>
+                            <div class="info-txt">
+                                <div class="lbl">Address</div>
+                                <div class="val">#32, Opposite Maruti Garments, Arehalli,<br>BSK 3rd Stage, Bangalore
+                                    &ndash; 560061</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-ico"><i class="fas fa-phone"></i></div>
+                            <div class="info-txt">
+                                <div class="lbl">Phone / WhatsApp</div>
+                                <div class="val"><a href="tel:+919845098882">+91-9845098882</a></div>
+                                <div class="val"><a href="tel:+919731452412">+91-9731452412</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-ico"><i class="fas fa-envelope"></i></div>
+                            <div class="info-txt">
+                                <div class="lbl">Email</div>
+                                <div class="val"><a
+                                        href="mailto:info@deccansupplies.com">info@deccansupplies.com</a><br></div>
+                                <div class="val"><a
+                                        href="mailto:eccansupplies@gmail.com">deccansupplies@gmail.com</a><br><a
+                                        href="mailto:deccansuppliesmysore@gmail.com">deccansuppliesmysore@gmail.com</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-ico"><i class="fas fa-clock"></i></div>
+                            <div class="info-txt">
+                                <div class="lbl">Working Hours</div>
+                                <div class="val">Monday &ndash; Saturday: 9:00 AM to 6:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form fade">
+                    <div class="form-head">
+                        <h4>Send Us a Message</h4>
+                        <p>We will get back within a few hours</p>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-row">
+                            <div class="fg"><label>Full Name</label><input type="text" placeholder="Your Name"></div>
+                            <div class="fg"><label>Company Name</label><input type="text" placeholder="Optional"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="fg"><label>Email Address</label><input type="email"
+                                    placeholder="your@email.com"></div>
+                            <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <label>Product / Service Required</label>
+                            <select>
+                                <option value="">-- Select Category --</option>
+                                <option>Insulator Products (DMC/SMC)</option>
+                                <option>Electrical Parts &ndash; MCB, Fuses, Controls</option>
+                                <option>Canon Printers &amp; Ink Cartridges</option>
+                                <option>Terminal Blocks &amp; Relays</option>
+                                <option>Turnkey Project Services</option>
+                                <option>Other / General Enquiry</option>
+                            </select>
+                        </div>
+                        <div class="fg">
+                            <label>Your Message</label>
+                            <textarea
+                                placeholder="Please describe your requirement &mdash; product name, quantity, specifications etc."></textarea>
+                        </div>
+                        <button class="form-submit"><i class="fas fa-paper-plane"></i>Submit Enquiry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="ft-about">
+                <div class="ft-logo">Deccan <span>Supplies</span></div>
+                <div class="ft-tag">Industrial Automation &amp; Panel Accessories Supplier</div>
+                <p>A dedicated Bangalore-based team handling electrical hardware supply and turnkey project services.
+                    Building client relationships through quality and commitment since 2012.</p>
+                <div class="ft-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="ft-col">
+                <h5>Quick Links</h5>
+                <ul class="ft-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h5>Contact Us</h5>
+                <div class="ft-ci"><i class="fas fa-phone"></i><a href="tel:+919845098882">+91-9845098882</a></div>
+                <div class="ft-ci"><i class="fas fa-phone"></i><a href="tel:+9199731452412">+91-99731452412</a></div>
+                <div class="ft-ci"><i class="fas fa-envelope"></i><span><a
+                            href="mailto:info@deccansupplies.com">info@deccansupplies.com</a><br><a
+                            href="mailto:deccansupplies@gmail.com">deccansupplies@gmail.com</a><br><a
+                            href="mailto:deccansuppliesmysore@gmail.com">deccansuppliesmysore@gmail.com</a></span></div>
+                <div class="ft-ci"><i class="fas fa-location-dot"></i><span>#32, Opp. Maruti Garments,<br>Arehalli, BSK
+                        3rd Stage,<br>Bangalore &ndash; 560061</span></div>
+                <div class="ft-ci"><i class="fas fa-clock"></i><span>Mon&ndash;Sat: 9 AM &ndash; 6 PM</span></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <a href="#">Deccan Supplies</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919845098882" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Scroll Top -->
+    <div class="scroll-top" id="stBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+            class="fas fa-arrow-up"></i></div>
+
+    <script>
+        /* CAROUSEL */
+        (function () {
+            var idx = 0;
+            var total = document.querySelectorAll('.carousel-item').length;
+            var timer;
+
+            function update() {
+                document.getElementById('carouselInner').style.transform = 'translateX(-' + (idx * 100) + '%)';
+                document.querySelectorAll('#carouselDots button').forEach(function (b, i) {
+                    b.classList.toggle('active', i === idx)
+                });
+                document.getElementById('carouselNum').textContent = (idx + 1) + ' / ' + total;
+            }
+            window.carouselMove = function (dir) {
+                idx = (idx + dir + total) % total;
+                update();
+                restart()
+            };
+            window.carouselGo = function (n) {
+                idx = n;
+                update();
+                restart()
+            };
+
+            function restart() {
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    carouselMove(1)
+                }, 5000)
+            }
+            restart();
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') carouselMove(-1);
+                if (e.key === 'ArrowRight') carouselMove(1)
+            });
+            var tx = 0,
+                el = document.getElementById('mainCarousel');
+            el.addEventListener('touchstart', function (e) {
+                tx = e.touches[0].clientX
+            });
+            el.addEventListener('touchend', function (e) {
+                var d = tx - e.changedTouches[0].clientX;
+                if (Math.abs(d) > 40) carouselMove(d > 0 ? 1 : -1)
+            });
+        })();
+
+        /* SCROLL EFFECTS */
+        window.addEventListener('scroll', function () {
+            document.getElementById('stBtn').classList.toggle('show', window.scrollY > 400);
+        });
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e, i) {
+                if (e.isIntersecting) setTimeout(function () {
+                    e.target.classList.add('in')
+                }, i * 80)
+            });
+        }, {
+            threshold: 0.1
+        });
+        document.querySelectorAll('.fade').forEach(function (el) {
+            obs.observe(el)
+        });
+        var secs = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', function () {
+            var cur = '';
+            secs.forEach(function (s) {
+                if (window.scrollY >= s.offsetTop - 80) cur = s.id
+            });
+            document.querySelectorAll('.nav-menu a').forEach(function (a) {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + cur)
+            });
+        });
+    </script>
+</body>
+
+</html>
