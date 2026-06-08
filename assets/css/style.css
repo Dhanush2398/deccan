@@ -409,7 +409,13 @@ img {
     cursor: pointer;
     transition: background .2s, border-color .2s
 }
-
+@media (max-width: 768px) {
+    .carousel-control {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
 .carousel-control:hover {
     background: var(--orange);
     border-color: var(--orange)
