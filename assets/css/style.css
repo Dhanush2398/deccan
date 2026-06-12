@@ -221,98 +221,60 @@ img {
 }
 
 /* ── CAROUSEL ── */
+/* ── CAROUSEL ── */
 
 .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
     background: #0d1f3c;
-    height: 520px
-}
-
-@media (max-width: 768px) {
-
-    .carousel {
-        height: auto;
-        min-height: 500px;
-    }
-
-    .carousel-item {
-        height: 420px;
-        min-height: unset;
-        padding: 20px 20px;
-        align-items: center;
-    }
-
-    .hero-content,
-    .slide-content {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero-content h1,
-    .slide-content h1 {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    .hero-content p,
-    .slide-content p {
-        font-size: 16px;
-    }
 }
 
 .carousel-inner {
     display: flex;
-    height: 100%;
-    transition: transform .6s ease-in-out
+    transition: transform .6s ease-in-out;
 }
 
 .carousel-item {
     min-width: 100%;
-    height: 100%;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center
+    align-items: center;
+    /* Desktop: fixed height */
+    min-height: 520px;
 }
 
 .carousel-item::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(10, 25, 60, .88) 0%, rgba(10, 25, 60, .65) 45%, rgba(10, 25, 60, .18) 100%)
+    background: linear-gradient(to right,
+        rgba(10, 25, 60, .88) 0%,
+        rgba(10, 25, 60, .65) 45%,
+        rgba(10, 25, 60, .18) 100%);
 }
 
 .slide-bg-2::after {
-    background: linear-gradient(to right, rgba(10, 25, 60, .93) 0%, rgba(10, 25, 60, .78) 50%, rgba(10, 25, 60, .45) 100%)
+    background: linear-gradient(to right,
+        rgba(10, 25, 60, .93) 0%,
+        rgba(10, 25, 60, .78) 50%,
+        rgba(10, 25, 60, .45) 100%);
 }
 
-.slide-bg-1 {
-    background-image: url(../images/resources/1.jpeg);
-    background-color: #111
-}
-
-.slide-bg-2 {
-    background-image: url(../images/resources/4.png);
-    background-color: #111
-}
-
-.slide-bg-3 {
-    background-image: url(../images/resources/home2.jpg);
-    background-color: #111
-}
-
+.slide-bg-1 { background-image: url(../images/resources/1.jpeg); background-color: #111; }
+.slide-bg-2 { background-image: url(../images/resources/4.png);  background-color: #111; }
+.slide-bg-3 { background-image: url(../images/resources/home2.jpg); background-color: #111; }
 
 .carousel-caption {
     position: relative;
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-
-    width: 100%
+    width: 100%;
+    padding: 60px 20px;
 }
 
 .c-label {
@@ -326,35 +288,33 @@ img {
     border: 1px solid rgba(240, 112, 48, .45);
     padding: 5px 16px;
     border-radius: 3px;
-    margin-bottom: 18px
+    margin-bottom: 18px;
 }
 
 .c-title {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(28px, 4vw, 54px);
+    font-size: clamp(22px, 4vw, 54px);
     font-weight: 700;
     color: #fff;
     line-height: 1.15;
     margin-bottom: 18px;
-    max-width: 600px
+    max-width: 600px;
 }
 
-.c-title span {
-    color: var(--orange2)
-}
+.c-title span { color: var(--orange2); }
 
 .c-desc {
-    font-size: 15.5px;
-    color: #fff;
+    font-size: 15px;
+    color: rgba(255,255,255,.88);
     line-height: 1.8;
     max-width: 520px;
-    margin-bottom: 32px
+    margin-bottom: 28px;
 }
 
 .c-btns {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .c-btn-solid {
@@ -368,12 +328,10 @@ img {
     font-weight: 600;
     padding: 12px 28px;
     border-radius: 4px;
-    transition: background .2s
+    transition: background .2s;
 }
 
-.c-btn-solid:hover {
-    background: var(--orange2)
-}
+.c-btn-solid:hover { background: var(--orange2); }
 
 .c-btn-ghost {
     display: inline-flex;
@@ -387,12 +345,12 @@ img {
     padding: 11px 28px;
     border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, .38);
-    transition: border-color .2s, background .2s
+    transition: border-color .2s, background .2s;
 }
 
 .c-btn-ghost:hover {
     border-color: #fff;
-    background: rgba(255, 255, 255, .06)
+    background: rgba(255, 255, 255, .06);
 }
 
 .carousel-control {
@@ -400,95 +358,141 @@ img {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, .13);
     border: 1px solid rgba(255, 255, 255, .22);
     border-radius: 4px;
     color: #fff;
-    font-size: 18px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background .2s, border-color .2s
+    transition: background .2s, border-color .2s;
 }
-@media (max-width: 768px) {
-    .carousel-control {
-        width: 36px;
-        height: 36px;
-        font-size: 14px;
-    }
-}
+
 .carousel-control:hover {
     background: var(--orange);
-    border-color: var(--orange)
+    border-color: var(--orange);
 }
 
-.carousel-prev {
-    left: 18px
-}
-
-.carousel-next {
-    right: 18px
-}
+.carousel-prev { left: 14px; }
+.carousel-next { right: 14px; }
 
 .carousel-indicators {
     position: absolute;
-    bottom: 20px;
+    bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 8px;
     z-index: 10;
     list-style: none;
-    padding: 0
+    padding: 0;
 }
 
 .carousel-indicators button {
-    width: 30px;
+    width: 28px;
     height: 4px;
     border-radius: 2px;
     background: rgba(255, 255, 255, .35);
     border: none;
     cursor: pointer;
     padding: 0;
-    transition: background .2s, width .2s
+    transition: background .2s, width .2s;
 }
 
 .carousel-indicators button.active {
     background: var(--orange);
-    width: 44px
+    width: 42px;
 }
 
 .carousel-num {
     position: absolute;
-    bottom: 22px;
-    right: 22px;
+    bottom: 20px;
+    right: 18px;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     color: rgba(255, 255, 255, .28);
-    z-index: 10
+    z-index: 10;
 }
 
-@media(max-width:900px) {
-    .carousel {
-        height: 420px
-    }
+/* ── CAROUSEL RESPONSIVE ── */
 
+@media (max-width: 900px) {
+    .carousel-item {
+        min-height: 460px;
+    }
 }
 
-@media(max-width:600px) {
-    .carousel {
-        height: 360px
+@media (max-width: 700px) {
+    .carousel-item {
+        /* Let content dictate height — image fills behind it */
+        min-height: 0;
+        background-size: cover;
+        background-position: center top;
     }
 
-    .c-btn-ghost {
-        display: none
+    /* Stronger overlay on mobile so text is always legible */
+    .carousel-item::after {
+        background: linear-gradient(
+            to bottom,
+            rgba(10, 25, 60, .75) 0%,
+            rgba(10, 25, 60, .82) 60%,
+            rgba(10, 25, 60, .90) 100%
+        ) !important;
+    }
+
+    .carousel-caption {
+        padding: 48px 20px 56px;
+    }
+
+    .c-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+        padding: 4px 12px;
+        margin-bottom: 12px;
     }
 
     .c-title {
-        font-size: 24px
+        font-size: clamp(22px, 7vw, 32px);
+        margin-bottom: 12px;
+        max-width: 100%;
+    }
+
+    .c-desc {
+        font-size: 14px;
+        margin-bottom: 22px;
+        max-width: 100%;
+    }
+
+    .c-btns {
+        gap: 10px;
+    }
+
+    .c-btn-solid,
+    .c-btn-ghost {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+
+    .carousel-control {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .carousel-prev { left: 8px; }
+    .carousel-next { right: 8px; }
+}
+
+@media (max-width: 400px) {
+    .c-btn-ghost {
+        display: none; /* single CTA on very small screens */
+    }
+    .c-title {
+        font-size: 21px;
     }
 }
 
@@ -1502,3 +1506,4 @@ img {
         height: 100px;
     }
 }
+
