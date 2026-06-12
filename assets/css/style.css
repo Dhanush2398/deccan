@@ -123,7 +123,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px
+    height: 90px
 }
 @media (min-width: 992px) {
     .nav-inner {
@@ -1492,7 +1492,7 @@ img {
 }
 
 .site-logo{
-    height:70px;
+    height:80px;
     width:auto;
     display:block;
 }
