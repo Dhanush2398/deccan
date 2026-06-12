@@ -1480,3 +1480,15 @@ img {
         min-width: 0;
     }
 }
+
+.nav-logo{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.site-logo{
+    height:50px; 
+    width:auto;
+    display:block;
+}
